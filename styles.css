@@ -9,6 +9,11 @@ header {
     text-align: center;
     padding: 20px;
 }
+header img{
+width:50%;
+    border-radius: 48%;
+    
+}
 
 
 .certificates {
