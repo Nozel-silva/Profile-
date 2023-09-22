@@ -38,18 +38,23 @@ body {
     color:white;
 }
 .talk img{
-width:100px;
-    
-    height:200px;
+width:400px;
+    text-align:
+    height:400px;
     border:5px solid white;
-    float:left;
+    
     
     
 }
-
+.certificates img{
+    width:400px;
+    height:400px;
+}
 
 .certificates {
     padding: 20px;
+text-align:center;
+color:purple;
 }
 .projects{
     padding:20px;
