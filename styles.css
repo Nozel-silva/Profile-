@@ -1,4 +1,4 @@
-body {
+    body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -11,7 +11,7 @@ body {
     min-width: 100%;
     min-height: 200px;
     max-width: 100%;
-    max-height: 200px;
+    max-height:200px;
     object-fit: cover;
     z-index: -1;
 }
@@ -38,23 +38,18 @@ body {
     color:white;
 }
 .talk img{
-width:400px;
-    text-align:
-    height:400px;
+width:100px;
+    
+    height:200px;
     border:5px solid white;
-    
+    float:left;
     
     
 }
-.slideshow-container img{
-    width:60%;
-    height:60%;
-}
+
 
 .certificates {
     padding: 20px;
-text-align:center;
-color:purple;
 }
 .projects{
     padding:20px;
@@ -64,6 +59,10 @@ color:purple;
     max-width: 600px;
     position: relative;
     margin: auto;
+}
+.slideshow-container img{
+    width: 40%;
+    height: 40%;
 }
 
 .mySlides {
@@ -75,7 +74,7 @@ color:purple;
     align-items: center;
 
 }
-.image img {
+img {
     width: 20%;
     height: 10%;
         border: 4px solid blue;
@@ -84,14 +83,18 @@ color:purple;
     background: white;
     color: purple;
     font-family: Arial, sans-serif;
-
+    font-size: 15px;
+    border: 1px solid black;
+    margin: 9px;
+    padding: 15px;
 }
 .pro h2{
-    margin: 10px;
+    margin: 20px;
     text-align: center;
     font-weight: 50px;
 }
 table{
+    margin-top: 20px;
     width: 100%;
     border-collapse: collapse;
     padding: 10px;
@@ -100,8 +103,8 @@ table a{
     text-decoration: none;
 }
 th,td{
-    border: 1px solid black;
+    
     padding: 10px;
     text-align: left;
 
-}
+    }
