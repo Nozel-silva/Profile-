@@ -3,12 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styls.css">
     
     <title>Your CV</title>
 </head>
 <style type="text/css">
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+
+
+#bg-video {
     
+    min-width: 100%;
+    min-height: 200px;
+    max-width: 100%;
+    max-height:200px;
+    object-fit: cover;
+    z-index: -1;
+}
+  #bg-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-overlay {
+  text-align: center;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+
+}
+.talk{
+    background: #333; 
+    overflow:hidden;
+    width:100%;
+    padding:20px;
+    margin:20px;
+    color:white;
+}
+.talk img{
+width:100px;
+    
+    height:200px;
+    border:5px solid white;
+    float:left;
+    
+    
+}
+
+
+.certificates {
+    padding: 20px;
+}
+.projects{
+    padding:20px;
+    text-align:;
+}
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+.slideshow-container img{
+    width: 40%;
+    height: 40%;
+}
+
+.mySlides {
+    display: none;
+}
+.image{
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+
+}
+img {
+    width: 20%;
+    height: 10%;
+        border: 4px solid blue;
+}
+.pro{
+    background: white;
+    color: purple;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: 1px solid black;
+    margin: 9px;
+    padding: 15px;
+}
+.pro h2{
+    margin: 20px;
+    text-align: center;
+    font-weight: 50px;
+}
+table{
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px;
+}
+table a{
+    text-decoration: none;
+}
+th,td{
+    
+    padding: 10px;
+    text-align: left;
+
+}
 
 /* Add more CSS for styling as needed */
 </style>
@@ -22,8 +131,9 @@
       <div class="video-overlay header-text">
           <div class="caption">
               
-              <h2></i><em>Ideas</em> Transfigurer</h2>
               
+              <h2><em>Ideas</em> become codes</h2>
+              <h2><em>Altogether</em> becomes reality</h2>
           </div>
       </div>
   </section>
@@ -57,43 +167,55 @@
         </div>
     </section>
     <section class="pro">
-        <h2>About</h2>
+    <section class="image">
+        <h2><i><a href="#">Nuel Agafie</a></i></h2>
+        <img src="1695367829110.jpg" >
         
+    </section>    
+        <h2>Biographical Information</h2>
 <table>
+    
     <tr>
-        <th>ATTRIBUTE</th>
-        <th>VALUE</th>
-    </tr>
-    <tr>
-        <td>Name</td>
+        <td><b>Name</b></td>
         <td>Emmanuel Agafie</td>
     </tr>
     <tr>
-        <td>Adana(nicknames)</td>
-        <td>Nuel Agafie, Nozel_Nuel,Nuel_sama.</td>
+        <td><b>Adana(nicknames)</b></td>
+        <td>Nuel Agafie, Nozel_Nuel, Nuel_sama.</td>
     </tr>
+</table>
+    <h2>Personal Description</h2>
+<table>
     <tr>
-        <td>Sex</td>
+        <td><b>Sex</b></td>
         <td>Male</td>
     </tr>
     <tr>
-        <td>Age</td>
+        <td><b>Age</b></td>
         <td>23</td>
     </tr>
     <tr>
-        <td>Height</td>
+        <td><b>species</b></td>
+        <td>Human</td>
+    </tr>
+
+    <tr>
+        <td><b>Height</b></td>
         <td>175cm</td>
     </tr>
     <tr>
-        <td>Date of Birth</td>
+        <td><b>Date of Birth</b></td>
         <td>March 3, 2000</td>
     </tr>
+</table>
+<h2>Professional Status</h2>
+<table>
     <tr>
-        <td>Projects</td>
+        <td><b>Projects</b></td>
         <td><a href="#">P.waves,</a> <a href="#">kakkeguri</a></td>
     </tr>
     <tr>
-        <td>Handles</td>
+        <td><b>Handles</b></td>
         <td><a href="#">@nostalgic_nuel</a>, <a href="#">@nuel_agafie</a></td>
     </tr>
 </table>
@@ -101,10 +223,7 @@
     
     </section>
 
-    <section class="image">
-        <img src="Snapchat-1022716676.jpg" >
-        <h2><i><a href="#">Nuel Agafie</a></i></h2>
-    </section>
+    
 
     <script src="script.js"></script>
 </body>
