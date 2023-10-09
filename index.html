@@ -77,6 +77,49 @@ width:100px;
     height: 70%;
 }
 
+
+   .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            touch-action: pan-y;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            transform: translateX(0);
+        }
+
+        .slide {
+            width: 200px;
+            height: 200px;
+            background-color: #444;
+            margin-right: 20px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: pan-x;
+        }
+        .slide h2 {
+            font-size: 24px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .control-button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
 .mySlides {
     display: none;
 }
@@ -168,6 +211,32 @@ th,td{
                 <p>sql certificate</p>
             </div>
             
+            
+            <div class="slider-container">
+    <marquee direction="left"> 
+        <div class="slider-wrapper" id="slider">
+            <div class="slide">
+                <h2>Slide 1</h2>
+            </div>
+            <div class="slide">
+                <h2>Slide 2</h2>
+            </div>
+            <div class="slide">
+                <h2>Slide 3</h2>
+            </div>
+            <div class="slide">
+                <h2>Slide 4</h2>
+            </div>
+            <div class="slide">
+                <h2>Slide 5</h2>
+            </div>
+        </div>
+        </marquee>
+    </div>
+    <div class="controls">
+        <button class="control-button" onclick="prevSlide()">Previous</button>
+        <button class="control-button" onclick="nextSlide()">Next</button>
+    </div>
             <!-- Add more certificate slides here -->
         </div>
     </section>
@@ -228,12 +297,43 @@ th,td{
     
     </section>
 
-    
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const sliderWrapper = document.getElementById('slider');
+        let startX = 0;
+
+        sliderWrapper.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        sliderWrapper.addEventListener('touchmove', (e) => {
+            const deltaX = e.touches[0].clientX - startX;
+            const slideWidth = slides[0].offsetWidth;
+            currentIndex -= deltaX / slideWidth;
+            startX = e.touches[0].clientX;
+            updateSliderPosition();
+        });
+
+        function prevSlide() {
+            currentIndex = Math.max(currentIndex - 1, 0);
+            updateSliderPosition();
+        }
+
+        function nextSlide() {
+            currentIndex = Math.min(currentIndex + 1, slides.length - 1);
+            updateSliderPosition();
+        }
+
+        function updateSliderPosition() {
+            const slideWidth = slides[0].offsetWidth;
+            sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
                             </html>
-
 
 
 
